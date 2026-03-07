@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body {
+  @apply bg-ivory text-ink antialiased;
+  background-image:
+    radial-gradient(circle at top left, rgba(210, 168, 152, 0.15), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(232, 219, 216, 0.7), transparent 25%);
+}
+.section-shell { @apply mx-auto max-w-7xl px-6 md:px-8; }
+.card-premium { @apply rounded-[28px] border border-black/5 bg-white/80 shadow-soft backdrop-blur; }
+.text-balance { text-wrap: balance; }
