@@ -1,0 +1,7 @@
+'use client';
+import Image from 'next/image';
+import { useState } from 'react';
+export default function BeforeAfter() {
+  const [position, setPosition] = useState(50);
+  return <div className="card-premium overflow-hidden p-4"><div className="relative h-[360px] overflow-hidden rounded-[24px] md:h-[480px]"><Image src="/placeholders/before.jpg" alt="Ejemplo visual antes" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" /><div className="absolute inset-y-0 left-0 overflow-hidden" style={{ width: `${position}%` }}><div className="relative h-full w-[800px] max-w-none md:w-full"><Image src="/placeholders/after.jpg" alt="Ejemplo visual después" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" /></div></div><div className="absolute inset-y-0" style={{ left: `${position}%` }}><div className="absolute inset-y-0 w-px bg-white/90" /><div className="absolute left-1/2 top-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/80 bg-white/90 text-xs font-semibold shadow">↔</div></div><div className="absolute left-4 top-4 rounded-full bg-white/85 px-3 py-1 text-xs uppercase tracking-[0.22em] text-black/70">Ejemplo visual</div></div><div className="px-2 pb-2 pt-5"><input aria-label="Comparador antes y después" type="range" min="0" max="100" value={position} onChange={(e) => setPosition(Number(e.target.value))} className="w-full accent-[rgb(202,154,136)]" /></div></div>;
+}
