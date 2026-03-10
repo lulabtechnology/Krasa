@@ -1,11 +1,113 @@
 'use client';
+
 import { useState } from 'react';
-const motives = ['Cicatrices quirúrgicas o traumáticas','Estrías','Vitiligo localizado','Reconstrucción de areola post mastectomía','Camuflaje de cicatrices corporales y faciales'];
+
+const motives = [
+  'Camuflaje de pexia mamaria',
+  'Camuflaje de estrias',
+  'Camuflaje de cicatrices',
+  'Camuflaje de mamoplastia',
+  'Camuflaje de manchas',
+  'Reconstruccion areolar total / parcial'
+];
+
 export default function WhatsAppForm() {
-  const [form, setForm] = useState({ name: '', phone: '', email: '', motive: motives[0], message: '' });
+  const [form, setForm] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    motive: motives[0],
+    message: ''
+  });
+
   const [error, setError] = useState('');
-  const update = (key: keyof typeof form, value: string) => setForm((prev) => ({ ...prev, [key]: value }));
-  const onSubmit = (e: React.FormEvent) => { e.preventDefault(); if (!form.name.trim() || !form.phone.trim() || !form.message.trim()) { setError('Completa nombre, WhatsApp y mensaje para continuar.'); return; } setError(''); const text = `Hola Krása Dermoestudio, soy ${form.name}. Quisiera agendar una valoración para: ${form.motive}. Mi caso: ${form.message}. Mi contacto: ${form.phone}.${form.email ? ` Mi email: ${form.email}.` : ''}`; window.open(`https://wa.me/50768917500?text=${encodeURIComponent(text)}`, '_blank'); };
-  const input = 'mt-2 w-full rounded-2xl border border-black/10 bg-white px-4 py-3 outline-none transition focus:border-black/20 focus:ring-2 focus:ring-[rgba(210,168,152,0.3)]';
-  return <form onSubmit={onSubmit} className="card-premium p-6 md:p-8"><div className="grid gap-5 md:grid-cols-2"><label className="text-sm text-black/70">Nombre<input className={input} value={form.name} onChange={(e) => update('name', e.target.value)} /></label><label className="text-sm text-black/70">WhatsApp<input className={input} value={form.phone} onChange={(e) => update('phone', e.target.value)} /></label><label className="text-sm text-black/70 md:col-span-2">Email (opcional)<input className={input} type="email" value={form.email} onChange={(e) => update('email', e.target.value)} /></label><label className="text-sm text-black/70 md:col-span-2">Motivo<select className={input} value={form.motive} onChange={(e) => update('motive', e.target.value)}>{motives.map((motive) => <option key={motive}>{motive}</option>)}</select></label><label className="text-sm text-black/70 md:col-span-2">Mensaje<textarea className={`${input} min-h-[140px]`} value={form.message} onChange={(e) => update('message', e.target.value)} /></label></div>{error ? <p className="mt-4 text-sm text-red-600">{error}</p> : null}<div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"><p className="text-sm text-black/60">Resultados pueden variar según cada caso.</p><button className="rounded-full bg-ink px-6 py-3 text-sm font-medium text-white transition hover:opacity-95">Agendar valoración por WhatsApp</button></div></form>;
+
+  const update = (key: keyof typeof form, value: string) =>
+    setForm((prev) => ({ ...prev, [key]: value }));
+
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!form.name.trim() || !form.phone.trim() || !form.message.trim()) {
+      setError('Completa nombre, WhatsApp y mensaje para continuar.');
+      return;
+    }
+
+    setError('');
+
+    const text = `Hola Krása Dermoestudio, soy ${form.name}. Quisiera agendar una valoración para: ${form.motive}. Mi caso: ${form.message}. Mi contacto: ${form.phone}.${form.email ? ` Mi email: ${form.email}.` : ''}`;
+
+    window.open(`https://wa.me/50768917500?text=${encodeURIComponent(text)}`, '_blank');
+  };
+
+  const input =
+    'mt-2 w-full rounded-[22px] border border-black/10 bg-white/90 px-4 py-3 text-[15px] leading-6 outline-none transition focus:border-black/20 focus:ring-2 focus:ring-[rgba(210,168,152,0.28)]';
+
+  return (
+    <form onSubmit={onSubmit} className="card-premium p-6 md:p-8">
+      <div className="grid gap-5 md:grid-cols-2">
+        <label className="text-sm text-black/70">
+          Nombre
+          <input
+            className={input}
+            value={form.name}
+            onChange={(e) => update('name', e.target.value)}
+          />
+        </label>
+
+        <label className="text-sm text-black/70">
+          WhatsApp
+          <input
+            className={input}
+            value={form.phone}
+            onChange={(e) => update('phone', e.target.value)}
+          />
+        </label>
+
+        <label className="text-sm text-black/70 md:col-span-2">
+          Email (opcional)
+          <input
+            className={input}
+            type="email"
+            value={form.email}
+            onChange={(e) => update('email', e.target.value)}
+          />
+        </label>
+
+        <label className="text-sm text-black/70 md:col-span-2">
+          Motivo
+          <select
+            className={`${input} min-h-[62px] appearance-none pr-10`}
+            value={form.motive}
+            onChange={(e) => update('motive', e.target.value)}
+          >
+            {motives.map((motive) => (
+              <option key={motive} value={motive}>
+                {motive}
+              </option>
+            ))}
+          </select>
+        </label>
+
+        <label className="text-sm text-black/70 md:col-span-2">
+          Mensaje
+          <textarea
+            className={`${input} min-h-[150px]`}
+            value={form.message}
+            onChange={(e) => update('message', e.target.value)}
+          />
+        </label>
+      </div>
+
+      {error ? <p className="mt-4 text-sm text-red-600">{error}</p> : null}
+
+      <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-sm text-black/60">Resultados pueden variar según cada caso.</p>
+
+        <button className="rounded-full bg-ink px-6 py-3 text-sm font-medium text-white transition duration-300 hover:-translate-y-[2px] hover:opacity-95">
+          Agendar valoración por WhatsApp
+        </button>
+      </div>
+    </form>
+  );
 }
