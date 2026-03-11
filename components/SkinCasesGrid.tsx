@@ -41,9 +41,7 @@ export default function SkinCasesGrid() {
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') {
-        setSelectedCase(null);
-      }
+      if (event.key === 'Escape') setSelectedCase(null);
     };
 
     window.addEventListener('keydown', onKeyDown);
@@ -84,7 +82,6 @@ export default function SkinCasesGrid() {
                 <div className="px-3 pb-3 pt-5">
                   <CheckCircle2 className="h-6 w-6 text-black/70" />
                   <p className="mt-4 font-serif text-2xl leading-tight">{item.title}</p>
-                  <p className="mt-3 text-sm text-black/55">Presiona para ver en grande</p>
                 </div>
               </div>
             </button>
