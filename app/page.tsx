@@ -18,22 +18,22 @@ import Header from '@/components/Header';
 import Reveal from '@/components/Reveal';
 import WhatsAppForm from '@/components/WhatsAppForm';
 
-const benefits = [
+const reasons = [
   {
-    title: 'Resultados visualmente armónicos',
-    text: 'Enfoque orientado a mejorar la apariencia de la piel con integración natural y criterio profesional.'
+    title: 'Protocolos profesionales personalizados',
+    text: 'Cada caso se analiza según tipo de piel, tono, textura, extensión del área y objetivo visual.'
   },
   {
-    title: 'Tratamiento personalizado',
-    text: 'Cada caso se analiza según tono, textura, tipo de marca y objetivo visual de la paciente.'
+    title: 'Pigmentos de alta calidad',
+    text: 'Se trabaja con materiales especializados y un enfoque técnico orientado a naturalidad y armonía.'
   },
   {
-    title: 'Ciencia + técnica + estética',
-    text: 'La valoración combina conocimiento clínico de la piel con ejecución artística avanzada.'
+    title: 'Técnicas paramédicas especializadas',
+    text: 'La valoración combina conocimiento de la piel, precisión técnica y sensibilidad estética.'
   },
   {
-    title: 'Experiencia sobria y humana',
-    text: 'Acompañamiento profesional con comunicación clara, realista y enfocada en confianza.'
+    title: 'Evaluación previa antes de cada tratamiento',
+    text: 'Se revisa el caso de forma individual para definir un abordaje responsable y realista.'
   }
 ];
 
@@ -46,13 +46,13 @@ const services = [
   },
   {
     title: 'Camuflaje de estrías',
-    text: 'Abordaje profesional para disminuir el contraste visual de estrías localizadas.',
+    text: 'Mejoramos visualmente la apariencia de estrías localizadas integrándolas al tono natural de la piel.',
     image: '/placeholders/service-estrias.jpg',
     icon: Sparkles
   },
   {
     title: 'Camuflaje de cicatrices',
-    text: 'Tratamiento pensado para mejorar visualmente cicatrices quirúrgicas o traumáticas.',
+    text: 'Tratamiento orientado a mejorar la apariencia visual de cicatrices quirúrgicas, traumáticas o estéticas.',
     image: '/placeholders/service-cicatrices.jpg',
     icon: Microscope
   },
@@ -79,18 +79,23 @@ const services = [
 const process = [
   {
     step: '01',
-    title: 'Valoración especializada',
-    text: 'Se analiza el caso, la zona, el tipo de piel y el objetivo visual esperado.'
+    title: 'Valoración profesional',
+    text: 'Evaluamos tu piel, historial, zona a tratar y expectativas visuales.'
   },
   {
     step: '02',
-    title: 'Diseño del abordaje',
-    text: 'Se define una estrategia personalizada según la condición y respuesta del tejido.'
+    title: 'Protocolo personalizado',
+    text: 'Definimos el tratamiento adecuado según tu caso y la respuesta esperada del tejido.'
   },
   {
     step: '03',
-    title: 'Procedimiento y seguimiento',
-    text: 'Se realiza el tratamiento con protocolos profesionales y control posterior.'
+    title: 'Procedimiento',
+    text: 'Aplicación técnica con pigmentos especializados, enfoque estético y criterios profesionales.'
+  },
+  {
+    step: '04',
+    title: 'Seguimiento',
+    text: 'Se controla la evolución y se valoran ajustes o sesiones adicionales si son necesarias.'
   }
 ];
 
@@ -136,16 +141,17 @@ export default function HomePage() {
             <Reveal>
               <div className="max-w-2xl">
                 <span className="inline-flex rounded-full border border-black/10 bg-white/80 px-4 py-2 text-[11px] uppercase tracking-[0.25em] text-black/55">
-                  Dermopigmentación paramédica · estética avanzada
+                  Dermopigmentación paramédica · Panamá
                 </span>
 
-                <h1 className="mt-6 font-serif text-5xl leading-[0.96] text-balance md:text-7xl xl:text-[5.3rem]">
-                  Restaurar armonía visual también puede verse premium.
+                <h1 className="mt-6 font-serif text-5xl leading-[0.96] text-balance md:text-7xl xl:text-[5.2rem]">
+                  Recupera la apariencia natural de tu piel
                 </h1>
 
                 <p className="mt-6 max-w-xl text-lg leading-8 text-black/68 md:text-[1.12rem]">
-                  Krása Dermoestudio ofrece valoración especializada y tratamientos de camuflaje
-                  con una estética médica elegante, un enfoque humano y protocolos personalizados.
+                  Especialistas en dermopigmentación paramédica en Panamá para mejorar visualmente
+                  cicatrices, estrías, vitiligo y secuelas cutáneas con un enfoque profesional,
+                  natural y personalizado.
                 </p>
 
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -154,20 +160,16 @@ export default function HomePage() {
                     target="_blank"
                     className="btn-primary"
                   >
-                    Agendar valoración por WhatsApp
+                    Reservar valoración
                   </a>
 
                   <a href="#resultados" className="btn-secondary">
-                    Ver antes y después
+                    Ver casos reales
                   </a>
                 </div>
 
                 <div className="mt-10 grid gap-4 sm:grid-cols-3">
-                  {[
-                    'Panamá',
-                    'Con cita previa',
-                    'Enfoque profesional y natural'
-                  ].map((item) => (
+                  {['Panamá', 'Con cita previa', 'Atención profesional personalizada'].map((item) => (
                     <div key={item} className="glass-pill">
                       {item}
                     </div>
@@ -198,7 +200,7 @@ export default function HomePage() {
                       Imagen principal
                     </p>
                     <p className="mt-1 text-sm leading-6 text-black/70">
-                      Reemplaza esta foto en:
+                      Subir aquí:
                       <br />
                       <span className="font-medium">/public/placeholders/hero-main.jpg</span>
                     </p>
@@ -206,10 +208,10 @@ export default function HomePage() {
 
                   <div className="hero-badge hero-badge-bottom">
                     <p className="text-[11px] uppercase tracking-[0.22em] text-black/45">
-                      Brand feel
+                      Recomendado
                     </p>
                     <p className="mt-1 text-sm leading-6 text-black/70">
-                      Clínico, femenino, sofisticado y de alta confianza.
+                      Foto profesional trabajando con dermógrafo o retrato clínico elegante.
                     </p>
                   </div>
                 </div>
@@ -224,9 +226,9 @@ export default function HomePage() {
           <Reveal>
             <div className="feature-band">
               <div>
-                <p className="feature-band-kicker">Diferenciador</p>
+                <p className="feature-band-kicker">El problema</p>
                 <h2 className="mt-3 font-serif text-3xl leading-tight md:text-4xl">
-                  Conocimiento clínico de la piel, técnica artística avanzada y protocolos personalizados.
+                  Muchas personas viven con marcas en la piel que afectan su seguridad y percepción personal.
                 </h2>
               </div>
 
@@ -234,13 +236,15 @@ export default function HomePage() {
                 <div className="mini-card">
                   <ShieldCheck className="h-5 w-5 text-black/70" />
                   <p className="mt-3 text-sm leading-6 text-black/68">
-                    Resultados visualmente naturales, sobrios y pensados para integrarse al tono de piel.
+                    Cicatrices quirúrgicas, estrías visibles, vitiligo y secuelas de procedimientos
+                    estéticos pueden impactar la confianza.
                   </p>
                 </div>
                 <div className="mini-card">
                   <BadgeCheck className="h-5 w-5 text-black/70" />
                   <p className="mt-3 text-sm leading-6 text-black/68">
-                    Atención enfocada en confianza, criterio profesional y orientación realista.
+                    En Krása Dermoestudio se trabaja con técnicas avanzadas de camuflaje paramédico
+                    para mejorar visualmente estas condiciones.
                   </p>
                 </div>
               </div>
@@ -249,57 +253,44 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="beneficios" className="py-14 md:py-24">
+      <section id="dermopigmentacion" className="py-14 md:py-24">
         <div className="section-shell">
-          <Reveal>
-            <div className="max-w-2xl">
-              <p className="section-kicker">Beneficios</p>
-              <h2 className="section-title">
-                Un lenguaje visual de lujo médico-estético, con fondo profesional real.
-              </h2>
-            </div>
-          </Reveal>
-
-          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-            {benefits.map((item, index) => (
-              <Reveal key={item.title} delay={index * 0.06}>
-                <div className="card-premium card-hover h-full p-7">
-                  <CheckCircle2 className="h-6 w-6 text-black/70" />
-                  <h3 className="mt-5 font-serif text-2xl leading-tight">{item.title}</h3>
-                  <p className="mt-4 text-sm leading-7 text-black/68">{item.text}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-14 md:py-24">
-        <div className="section-shell">
-          <Reveal>
-            <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
-              <div>
-                <p className="section-kicker">Cómo funciona</p>
+          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+            <Reveal>
+              <div className="card-premium card-hover p-8 md:p-10">
+                <p className="section-kicker">Qué es la dermopigmentación paramédica</p>
                 <h2 className="section-title">
-                  Un proceso claro, elegante y pensado para generar confianza desde el primer contacto.
+                  Una técnica especializada orientada a naturalidad, armonía y discreción.
                 </h2>
+                <p className="mt-5 leading-8 text-black/68">
+                  La dermopigmentación paramédica consiste en implantar pigmentos biocompatibles en la
+                  piel para armonizar el color y mejorar visualmente irregularidades cutáneas.
+                </p>
+                <p className="mt-5 leading-8 text-black/68">
+                  Se utiliza en cicatrices quirúrgicas, estrías, vitiligo estable, reconstrucción
+                  areolar y otros casos seleccionados que requieren integración cromática y criterio técnico.
+                </p>
               </div>
+            </Reveal>
 
-              <div className="grid gap-5 md:grid-cols-3">
-                {process.map((item, index) => (
-                  <Reveal key={item.step} delay={index * 0.08}>
-                    <div className="card-premium card-hover h-full p-7">
-                      <p className="text-xs uppercase tracking-[0.28em] text-black/45">
-                        Paso {item.step}
-                      </p>
-                      <h3 className="mt-4 font-serif text-2xl leading-tight">{item.title}</h3>
-                      <p className="mt-4 text-sm leading-7 text-black/68">{item.text}</p>
+            <div className="grid gap-5 sm:grid-cols-2">
+              {[
+                'Cicatrices quirúrgicas',
+                'Estrías',
+                'Vitiligo estable',
+                'Reconstrucción areolar'
+              ].map((item, index) => (
+                <Reveal key={item} delay={index * 0.06}>
+                  <div className="card-premium card-hover flex min-h-[140px] items-end p-6">
+                    <div>
+                      <CheckCircle2 className="h-6 w-6 text-black/70" />
+                      <p className="mt-4 font-serif text-2xl leading-tight">{item}</p>
                     </div>
-                  </Reveal>
-                ))}
-              </div>
+                  </div>
+                </Reveal>
+              ))}
             </div>
-          </Reveal>
+          </div>
         </div>
       </section>
 
@@ -308,14 +299,14 @@ export default function HomePage() {
           <Reveal>
             <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
               <div className="max-w-2xl">
-                <p className="section-kicker">Servicios</p>
+                <p className="section-kicker">Tratamientos que ofrecemos</p>
                 <h2 className="section-title">
-                  Servicios visualmente mejor presentados, con imagen premium y estructura más pro.
+                  Servicios presentados con una estética premium y una estructura más estratégica.
                 </h2>
               </div>
 
               <p className="max-w-md text-black/65">
-                Cada tarjeta deja espacio para imagen. Solo reemplaza los archivos dentro de
+                Reemplaza las imágenes de cada servicio dentro de
                 <span className="font-medium"> /public/placeholders/</span>.
               </p>
             </div>
@@ -339,14 +330,12 @@ export default function HomePage() {
                       <div className="service-overlay" />
                       <div className="service-chip">
                         <Icon className="h-4 w-4" />
-                        <span>Servicio</span>
+                        <span>Tratamiento</span>
                       </div>
                     </div>
 
                     <div className="p-6">
-                      <h3 className="font-serif text-[1.8rem] leading-tight">
-                        {service.title}
-                      </h3>
+                      <h3 className="font-serif text-[1.8rem] leading-tight">{service.title}</h3>
                       <p className="mt-4 text-sm leading-7 text-black/68">{service.text}</p>
                     </div>
                   </div>
@@ -361,14 +350,13 @@ export default function HomePage() {
         <div className="section-shell">
           <Reveal>
             <div className="max-w-2xl">
-              <p className="section-kicker">Antes y después</p>
+              <p className="section-kicker">Casos reales</p>
               <h2 className="section-title">
-                Espacio pro para mostrar resultados con comparador visual.
+                Antes y después presentados con un enfoque visual elegante y creíble.
               </h2>
               <p className="mt-5 text-black/65">
-                Reemplaza estas imágenes en:
-                <span className="font-medium"> /public/placeholders/before.jpg</span> y
-                <span className="font-medium"> /public/placeholders/after.jpg</span>
+                Resultados reales obtenidos con protocolos personalizados en Krása Dermoestudio.
+                Cada piel responde de forma distinta, por lo que los resultados pueden variar.
               </p>
             </div>
           </Reveal>
@@ -385,13 +373,13 @@ export default function HomePage() {
                     <div className="relative overflow-hidden rounded-[24px]">
                       <Image
                         src={`/placeholders/${file}`}
-                        alt={`Resultado visual ${index + 1}`}
+                        alt={`Caso real ${index + 1}`}
                         width={900}
                         height={700}
                         className="h-[260px] w-full object-cover md:h-[320px]"
                       />
                       <div className="absolute left-4 top-4 rounded-full border border-white/40 bg-white/85 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-black/65">
-                        Ejemplo visual
+                        Caso real
                       </div>
                     </div>
                   </div>
@@ -402,13 +390,107 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section id="especialista" className="py-14 md:py-24">
+        <div className="section-shell">
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <Reveal>
+              <div className="card-premium overflow-hidden p-3">
+                <Image
+                  src="/placeholders/specialist.jpg"
+                  alt="Luisana Concepción"
+                  width={1000}
+                  height={1200}
+                  className="rounded-[24px] object-cover"
+                />
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.1}>
+              <div className="card-premium card-hover p-8 md:p-10">
+                <p className="section-kicker">Sobre la especialista</p>
+                <h2 className="section-title">Luisana Concepción</h2>
+                <p className="mt-3 text-lg text-black/70">
+                  Especialista en dermopigmentación paramédica
+                </p>
+                <p className="mt-6 leading-8 text-black/68">
+                  Fundadora de Krása Dermoestudio, con formación especializada en técnicas de
+                  camuflaje paramédico y estética avanzada.
+                </p>
+                <p className="mt-5 leading-8 text-black/68">
+                  Su enfoque combina precisión técnica, conocimiento de la piel y sensibilidad
+                  estética, con el objetivo de ofrecer resultados naturales, armónicos y visualmente discretos.
+                </p>
+                <p className="mt-6 text-sm text-black/55">
+                  Subir imagen en:
+                  <span className="font-medium"> /public/placeholders/specialist.jpg</span>
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <section id="porque-elegir" className="py-14 md:py-24">
+        <div className="section-shell">
+          <Reveal>
+            <div className="max-w-2xl">
+              <p className="section-kicker">Por qué elegir Krása</p>
+              <h2 className="section-title">
+                El mismo look premium, pero con argumentos más sólidos para convertir.
+              </h2>
+            </div>
+          </Reveal>
+
+          <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            {reasons.map((item, index) => (
+              <Reveal key={item.title} delay={index * 0.06}>
+                <div className="card-premium card-hover h-full p-7">
+                  <CheckCircle2 className="h-6 w-6 text-black/70" />
+                  <h3 className="mt-5 font-serif text-2xl leading-tight">{item.title}</h3>
+                  <p className="mt-4 text-sm leading-7 text-black/68">{item.text}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-14 md:py-24">
+        <div className="section-shell">
+          <Reveal>
+            <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+              <div>
+                <p className="section-kicker">Proceso de atención</p>
+                <h2 className="section-title">
+                  Un recorrido claro, profesional y pensado para dar seguridad desde el primer contacto.
+                </h2>
+              </div>
+
+              <div className="grid gap-5 md:grid-cols-2">
+                {process.map((item, index) => (
+                  <Reveal key={item.step} delay={index * 0.08}>
+                    <div className="card-premium card-hover h-full p-7">
+                      <p className="text-xs uppercase tracking-[0.28em] text-black/45">
+                        Paso {item.step}
+                      </p>
+                      <h3 className="mt-4 font-serif text-2xl leading-tight">{item.title}</h3>
+                      <p className="mt-4 text-sm leading-7 text-black/68">{item.text}</p>
+                    </div>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       <section className="py-14 md:py-24">
         <div className="section-shell">
           <Reveal>
             <div className="max-w-2xl">
               <p className="section-kicker">Testimonios</p>
               <h2 className="section-title">
-                Una percepción de marca más elegante, humana y confiable.
+                Prueba social sobria, humana y coherente con la estética premium.
               </h2>
             </div>
           </Reveal>
@@ -433,7 +515,7 @@ export default function HomePage() {
         <div className="section-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <Reveal>
             <div>
-              <p className="section-kicker">FAQ</p>
+              <p className="section-kicker">Preguntas frecuentes</p>
               <h2 className="section-title">Respuestas claras antes de tu valoración.</h2>
               <p className="mt-5 text-black/65">
                 Información sobria, sin promesas irreales y con criterio profesional.
@@ -453,20 +535,19 @@ export default function HomePage() {
             <div>
               <p className="section-kicker">Agenda tu valoración</p>
               <h2 className="section-title">
-                Un cierre más premium, limpio y orientado a convertir por WhatsApp.
+                Recupera la confianza en tu piel con una valoración personalizada.
               </h2>
               <p className="mt-5 text-black/65">
-                Contacto principal: Luisana Concepción · Instagram: @krasadermoestudio · Panamá ·
-                Con cita previa.
+                WhatsApp: +507 6891 7500 · Instagram: @krasadermoestudio · Panamá · Con cita previa.
               </p>
 
               <div className="mt-8 card-premium p-6">
                 <p className="text-xs uppercase tracking-[0.24em] text-black/45">
-                  Ideal para esta sección
+                  Recomendación
                 </p>
                 <p className="mt-3 text-sm leading-7 text-black/68">
-                  Si después quieres, aquí también podemos poner una segunda foto vertical,
-                  una mini galería o una insignia de confianza.
+                  Si luego quieres, aquí también podemos poner otra foto vertical, una insignia de
+                  confianza o una mini galería para elevar todavía más la percepción premium.
                 </p>
               </div>
             </div>
@@ -483,9 +564,9 @@ export default function HomePage() {
           <Reveal>
             <div className="cta-banner">
               <div className="max-w-2xl">
-                <p className="section-kicker">CTA final</p>
+                <p className="section-kicker">Llamado a la acción</p>
                 <h2 className="mt-3 font-serif text-3xl leading-tight md:text-5xl">
-                  Agenda tu valoración por WhatsApp y recibe orientación inicial sobre tu caso.
+                  Agenda tu valoración personalizada en Krása Dermoestudio.
                 </h2>
               </div>
 
@@ -494,7 +575,7 @@ export default function HomePage() {
                 target="_blank"
                 className="btn-primary inline-flex items-center gap-2"
               >
-                Agendar valoración por WhatsApp
+                Agendar valoración
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -512,8 +593,8 @@ export default function HomePage() {
           </div>
 
           <p className="max-w-xl text-sm leading-6 text-black/52">
-            Aviso legal: La información de este sitio es orientativa y no sustituye una valoración
-            individual. Resultados pueden variar según cada caso.
+            Aviso legal: La información de este sitio es orientativa y no sustituye una valoración individual.
+            Resultados pueden variar según cada caso.
           </p>
         </div>
       </footer>
