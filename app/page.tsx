@@ -297,18 +297,33 @@ export default function HomePage() {
               </div>
             </Reveal>
 
-            <div className="grid gap-5 sm:grid-cols-2">
-              {[
-                'Cicatrices quirúrgicas',
-                'Estrías',
-                'Vitiligo estable',
-                'Reconstrucción areolar'
-              ].map((item, index) => (
-                <Reveal key={item} delay={index * 0.06}>
-                  <div className="card-premium card-hover flex min-h-[140px] items-end p-6">
-                    <div>
+                      <div className="grid gap-5 sm:grid-cols-2">
+              {skinCases.map((item, index) => (
+                <Reveal key={item.title} delay={index * 0.06}>
+                  <div className="card-premium card-hover overflow-hidden p-3">
+                    <div className="grid gap-3 sm:grid-cols-2">
+                      {[
+                        { label: 'Antes', src: item.before },
+                        { label: 'Después', src: item.after }
+                      ].map((image) => (
+                        <div key={image.label} className="relative overflow-hidden rounded-[24px]">
+                          <Image
+                            src={image.src}
+                            alt={`${item.title} ${image.label.toLowerCase()}`}
+                            width={900}
+                            height={1100}
+                            className="h-[220px] w-full object-cover md:h-[250px]"
+                          />
+                          <div className="absolute left-3 top-3 rounded-full border border-white/40 bg-white/88 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-black/65 backdrop-blur-xl">
+                            {image.label}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="px-3 pb-3 pt-5">
                       <CheckCircle2 className="h-6 w-6 text-black/70" />
-                      <p className="mt-4 font-serif text-2xl leading-tight">{item}</p>
+                      <p className="mt-4 font-serif text-2xl leading-tight">{item.title}</p>
                     </div>
                   </div>
                 </Reveal>
