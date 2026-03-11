@@ -11,7 +11,7 @@ import {
   Sparkles,
   Stethoscope
 } from 'lucide-react';
-import BeforeAfter from '@/components/BeforeAfter';
+import ResultsGallery from '@/components/ResultsGallery';
 import FAQ from '@/components/FAQ';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import Header from '@/components/Header';
@@ -399,32 +399,7 @@ export default function HomePage() {
             </div>
           </Reveal>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-[1.12fr_0.88fr]">
-            <Reveal>
-              <BeforeAfter />
-            </Reveal>
-
-            <div className="grid gap-6">
-              {['result-1.jpg', 'result-2.jpg'].map((file, index) => (
-                <Reveal key={file} delay={index * 0.08}>
-                  <div className="card-premium card-hover overflow-hidden p-3">
-                    <div className="relative overflow-hidden rounded-[24px]">
-                      <Image
-                        src={`/placeholders/${file}`}
-                        alt={`Caso real ${index + 1}`}
-                        width={900}
-                        height={700}
-                        className="h-[260px] w-full object-cover md:h-[320px]"
-                      />
-                      <div className="absolute left-4 top-4 rounded-full border border-white/40 bg-white/85 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-black/65">
-                        Caso real
-                      </div>
-                    </div>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
+                  <ResultsGallery />
         </div>
       </section>
 
@@ -628,10 +603,23 @@ export default function HomePage() {
             </p>
           </div>
 
-          <p className="max-w-xl text-sm leading-6 text-black/52">
-            Aviso legal: La información de este sitio es orientativa y no sustituye una valoración individual.
-            Resultados pueden variar según cada caso.
-          </p>
+                 <div className="max-w-xl text-sm leading-6 text-black/52">
+            <p>
+              Aviso legal: La información de este sitio es orientativa y no sustituye una valoración individual.
+              Resultados pueden variar según cada caso.
+            </p>
+            <p className="mt-3">
+              Desarrollado por{' '}
+              <a
+                href="https://lulabtech.com"
+                target="_blank"
+                rel="noreferrer"
+                className="transition hover:text-black"
+              >
+                lulabtech.com
+              </a>
+            </p>
+          </div>
         </div>
       </footer>
     </main>
