@@ -214,12 +214,6 @@ export default function HomePage() {
 </div>
 
                   <div className="hero-badge hero-badge-bottom">
-                    <p className="text-[11px] uppercase tracking-[0.22em] text-black/45">
-                      Recomendado
-                    </p>
-                    <p className="mt-1 text-sm leading-6 text-black/70">
-                      Foto profesional trabajando con dermógrafo o retrato clínico elegante.
-                    </p>
                   </div>
                 </div>
               </div>
