@@ -195,16 +195,23 @@ export default function HomePage() {
                     />
                   </div>
 
-                  <div className="hero-badge hero-badge-top">
-                    <p className="text-[11px] uppercase tracking-[0.22em] text-black/45">
-                      Imagen principal
-                    </p>
-                    <p className="mt-1 text-sm leading-6 text-black/70">
-                      Subir aquí:
-                      <br />
-                      <span className="font-medium">/public/placeholders/hero-main.jpg</span>
-                    </p>
-                  </div>
+                 <div className="hero-badge hero-badge-top">
+  <p className="text-[11px] uppercase tracking-[0.22em] text-black/45">
+    Krása Dermoestudio
+  </p>
+  <p className="mt-1 text-sm leading-6 text-black/70">
+    Dermopigmentación paramédica con enfoque profesional, natural y personalizado.
+  </p>
+</div>
+
+<div className="hero-badge hero-badge-bottom">
+  <p className="text-[11px] uppercase tracking-[0.22em] text-black/45">
+    Panamá
+  </p>
+  <p className="mt-1 text-sm leading-6 text-black/70">
+    Atención especializada con cita previa.
+  </p>
+</div>
 
                   <div className="hero-badge hero-badge-bottom">
                     <p className="text-[11px] uppercase tracking-[0.22em] text-black/45">
@@ -305,10 +312,9 @@ export default function HomePage() {
                 </h2>
               </div>
 
-              <p className="max-w-md text-black/65">
-                Reemplaza las imágenes de cada servicio dentro de
-                <span className="font-medium"> /public/placeholders/</span>.
-              </p>
+           <p className="max-w-md text-black/65">
+  Tratamientos diseñados con un enfoque técnico, estético y personalizado para cada caso.
+</p>
             </div>
           </Reveal>
 
@@ -420,10 +426,9 @@ export default function HomePage() {
                   Su enfoque combina precisión técnica, conocimiento de la piel y sensibilidad
                   estética, con el objetivo de ofrecer resultados naturales, armónicos y visualmente discretos.
                 </p>
-                <p className="mt-6 text-sm text-black/55">
-                  Subir imagen en:
-                  <span className="font-medium"> /public/placeholders/specialist.jpg</span>
-                </p>
+              <p className="mt-6 text-sm text-black/55">
+  Atención profesional con enfoque humano, estético y clínico.
+</p>
               </div>
             </Reveal>
           </div>
@@ -541,15 +546,14 @@ export default function HomePage() {
                 WhatsApp: +507 6891 7500 · Instagram: @krasadermoestudio · Panamá · Con cita previa.
               </p>
 
-              <div className="mt-8 card-premium p-6">
-                <p className="text-xs uppercase tracking-[0.24em] text-black/45">
-                  Recomendación
-                </p>
-                <p className="mt-3 text-sm leading-7 text-black/68">
-                  Si luego quieres, aquí también podemos poner otra foto vertical, una insignia de
-                  confianza o una mini galería para elevar todavía más la percepción premium.
-                </p>
-              </div>
+            <div className="mt-8 card-premium p-6">
+  <p className="text-xs uppercase tracking-[0.24em] text-black/45">
+    Valoración especializada
+  </p>
+  <p className="mt-3 text-sm leading-7 text-black/68">
+    Cada caso se evalúa de forma individual para definir un abordaje visualmente armónico y realista.
+  </p>
+</div>
             </div>
           </Reveal>
 
