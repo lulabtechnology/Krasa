@@ -10,7 +10,7 @@ export default function BeforeAfter() {
     <div className="card-premium overflow-hidden p-4 md:p-5">
       <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <p className="text-xs uppercase tracking-[0.25em] text-black/45">Comparador visual</p>
+          <p className="text-xs uppercase tracking-[0.25em] text-black/45">Caso real</p>
           <h3 className="mt-2 font-serif text-3xl leading-tight md:text-4xl">
             Antes y después
           </h3>
@@ -26,7 +26,7 @@ export default function BeforeAfter() {
       <div className="relative h-[400px] overflow-hidden rounded-[28px] md:h-[560px]">
         <Image
           src="/placeholders/before.jpg"
-          alt="Antes"
+          alt="Antes del tratamiento"
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, 60vw"
@@ -39,7 +39,7 @@ export default function BeforeAfter() {
           <div className="relative h-full w-[900px] max-w-none md:w-full">
             <Image
               src="/placeholders/after.jpg"
-              alt="Después"
+              alt="Después del tratamiento"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 60vw"
@@ -58,7 +58,7 @@ export default function BeforeAfter() {
         </div>
 
         <div className="absolute left-4 top-4 rounded-full border border-white/35 bg-white/85 px-4 py-2 text-[11px] uppercase tracking-[0.22em] text-black/70 backdrop-blur-xl">
-          Ejemplo visual
+          Caso real
         </div>
 
         <div className="absolute bottom-4 left-4 rounded-full border border-white/35 bg-white/85 px-4 py-2 text-[11px] uppercase tracking-[0.22em] text-black/70 backdrop-blur-xl">
