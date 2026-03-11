@@ -17,6 +17,7 @@ import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import Header from '@/components/Header';
 import Reveal from '@/components/Reveal';
 import WhatsAppForm from '@/components/WhatsAppForm';
+import SkinCasesGrid from '@/components/SkinCasesGrid';
 
 const reasons = [
   {
