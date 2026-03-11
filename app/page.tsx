@@ -99,6 +99,29 @@ const process = [
   }
 ];
 
+const skinCases = [
+  {
+    title: 'Cicatrices quirúrgicas',
+    before: '/placeholders/case-cicatrices-before.jpg',
+    after: '/placeholders/case-cicatrices-after.jpg'
+  },
+  {
+    title: 'Estrías',
+    before: '/placeholders/case-estrias-before.jpg',
+    after: '/placeholders/case-estrias-after.jpg'
+  },
+  {
+    title: 'Vitiligo estable',
+    before: '/placeholders/case-vitiligo-before.jpg',
+    after: '/placeholders/case-vitiligo-after.jpg'
+  },
+  {
+    title: 'Reconstrucción areolar',
+    before: '/placeholders/case-areolar-before.jpg',
+    after: '/placeholders/case-areolar-after.jpg'
+  }
+];
+
 const testimonials = [
   'Desde la valoración sentí profesionalismo, calma y mucha claridad sobre mi caso.',
   'Me gustó que todo fue explicado con realismo, sin exageraciones y con mucha empatía.',
