@@ -2,7 +2,6 @@ import Image from 'next/image';
 import {
   ArrowRight,
   BadgeCheck,
-  CheckCircle2,
   Droplets,
   HeartHandshake,
   Layers3,
