@@ -99,6 +99,29 @@ const process = [
   }
 ];
 
+const skinCases = [
+  {
+    title: 'Cicatrices quirúrgicas',
+    before: '/placeholders/case-cicatrices-before.jpg',
+    after: '/placeholders/case-cicatrices-after.jpg'
+  },
+  {
+    title: 'Estrías',
+    before: '/placeholders/case-estrias-before.jpg',
+    after: '/placeholders/case-estrias-after.jpg'
+  },
+  {
+    title: 'Vitiligo estable',
+    before: '/placeholders/case-vitiligo-before.jpg',
+    after: '/placeholders/case-vitiligo-after.jpg'
+  },
+  {
+    title: 'Reconstrucción areolar',
+    before: '/placeholders/case-areolar-before.jpg',
+    after: '/placeholders/case-areolar-after.jpg'
+  }
+];
+
 const testimonials = [
   'Desde la valoración sentí profesionalismo, calma y mucha claridad sobre mi caso.',
   'Me gustó que todo fue explicado con realismo, sin exageraciones y con mucha empatía.',
@@ -195,24 +218,25 @@ export default function HomePage() {
                     />
                   </div>
 
-                  <div className="hero-badge hero-badge-top">
-                    <p className="text-[11px] uppercase tracking-[0.22em] text-black/45">
-                      Imagen principal
-                    </p>
-                    <p className="mt-1 text-sm leading-6 text-black/70">
-                      Subir aquí:
-                      <br />
-                      <span className="font-medium">/public/placeholders/hero-main.jpg</span>
-                    </p>
-                  </div>
+                 <div className="hero-badge hero-badge-top">
+  <p className="text-[11px] uppercase tracking-[0.22em] text-black/45">
+    Krása Dermoestudio
+  </p>
+  <p className="mt-1 text-sm leading-6 text-black/70">
+    Dermopigmentación paramédica con enfoque profesional, natural y personalizado.
+  </p>
+</div>
+
+<div className="hero-badge hero-badge-bottom">
+  <p className="text-[11px] uppercase tracking-[0.22em] text-black/45">
+    Panamá
+  </p>
+  <p className="mt-1 text-sm leading-6 text-black/70">
+    Atención especializada con cita previa.
+  </p>
+</div>
 
                   <div className="hero-badge hero-badge-bottom">
-                    <p className="text-[11px] uppercase tracking-[0.22em] text-black/45">
-                      Recomendado
-                    </p>
-                    <p className="mt-1 text-sm leading-6 text-black/70">
-                      Foto profesional trabajando con dermógrafo o retrato clínico elegante.
-                    </p>
                   </div>
                 </div>
               </div>
@@ -273,18 +297,33 @@ export default function HomePage() {
               </div>
             </Reveal>
 
-            <div className="grid gap-5 sm:grid-cols-2">
-              {[
-                'Cicatrices quirúrgicas',
-                'Estrías',
-                'Vitiligo estable',
-                'Reconstrucción areolar'
-              ].map((item, index) => (
-                <Reveal key={item} delay={index * 0.06}>
-                  <div className="card-premium card-hover flex min-h-[140px] items-end p-6">
-                    <div>
+                      <div className="grid gap-5 sm:grid-cols-2">
+              {skinCases.map((item, index) => (
+                <Reveal key={item.title} delay={index * 0.06}>
+                  <div className="card-premium card-hover overflow-hidden p-3">
+                    <div className="grid gap-3 sm:grid-cols-2">
+                      {[
+                        { label: 'Antes', src: item.before },
+                        { label: 'Después', src: item.after }
+                      ].map((image) => (
+                        <div key={image.label} className="relative overflow-hidden rounded-[24px]">
+                          <Image
+                            src={image.src}
+                            alt={`${item.title} ${image.label.toLowerCase()}`}
+                            width={900}
+                            height={1100}
+                            className="h-[220px] w-full object-cover md:h-[250px]"
+                          />
+                          <div className="absolute left-3 top-3 rounded-full border border-white/40 bg-white/88 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-black/65 backdrop-blur-xl">
+                            {image.label}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="px-3 pb-3 pt-5">
                       <CheckCircle2 className="h-6 w-6 text-black/70" />
-                      <p className="mt-4 font-serif text-2xl leading-tight">{item}</p>
+                      <p className="mt-4 font-serif text-2xl leading-tight">{item.title}</p>
                     </div>
                   </div>
                 </Reveal>
@@ -305,10 +344,9 @@ export default function HomePage() {
                 </h2>
               </div>
 
-              <p className="max-w-md text-black/65">
-                Reemplaza las imágenes de cada servicio dentro de
-                <span className="font-medium"> /public/placeholders/</span>.
-              </p>
+           <p className="max-w-md text-black/65">
+  Tratamientos diseñados con un enfoque técnico, estético y personalizado para cada caso.
+</p>
             </div>
           </Reveal>
 
@@ -420,10 +458,9 @@ export default function HomePage() {
                   Su enfoque combina precisión técnica, conocimiento de la piel y sensibilidad
                   estética, con el objetivo de ofrecer resultados naturales, armónicos y visualmente discretos.
                 </p>
-                <p className="mt-6 text-sm text-black/55">
-                  Subir imagen en:
-                  <span className="font-medium"> /public/placeholders/specialist.jpg</span>
-                </p>
+              <p className="mt-6 text-sm text-black/55">
+  Atención profesional con enfoque humano, estético y clínico.
+</p>
               </div>
             </Reveal>
           </div>
@@ -541,15 +578,14 @@ export default function HomePage() {
                 WhatsApp: +507 6891 7500 · Instagram: @krasadermoestudio · Panamá · Con cita previa.
               </p>
 
-              <div className="mt-8 card-premium p-6">
-                <p className="text-xs uppercase tracking-[0.24em] text-black/45">
-                  Recomendación
-                </p>
-                <p className="mt-3 text-sm leading-7 text-black/68">
-                  Si luego quieres, aquí también podemos poner otra foto vertical, una insignia de
-                  confianza o una mini galería para elevar todavía más la percepción premium.
-                </p>
-              </div>
+            <div className="mt-8 card-premium p-6">
+  <p className="text-xs uppercase tracking-[0.24em] text-black/45">
+    Valoración especializada
+  </p>
+  <p className="mt-3 text-sm leading-7 text-black/68">
+    Cada caso se evalúa de forma individual para definir un abordaje visualmente armónico y realista.
+  </p>
+</div>
             </div>
           </Reveal>
 

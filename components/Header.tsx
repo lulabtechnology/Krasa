@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const nav = [
@@ -16,18 +17,16 @@ export default function Header() {
       <div className="section-shell pt-4">
         <div className="rounded-full border border-black/5 bg-white/78 px-4 py-3 shadow-soft backdrop-blur-xl md:px-5">
           <div className="flex items-center justify-between gap-4">
-            <a href="#inicio" className="flex min-w-0 items-center gap-3">
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-black/10 bg-cream text-sm font-semibold">
-                K
-              </div>
-
-              <div className="min-w-0">
-                <p className="truncate font-serif text-[1.7rem] leading-none tracking-wide">
-                  Krása
-                </p>
-                <p className="truncate text-[11px] uppercase tracking-[0.28em] text-black/50">
-                  Dermoestudio
-                </p>
+            <a href="#inicio" className="flex min-w-0 items-center">
+              <div className="relative h-12 w-[132px] shrink-0 md:h-14 md:w-[156px]">
+                <Image
+                  src="/logo.png"
+                  alt="Krása Dermoestudio"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 132px, 156px"
+                  className="object-contain object-left"
+                />
               </div>
             </a>
 
