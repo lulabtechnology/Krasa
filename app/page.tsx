@@ -280,7 +280,7 @@ export default function HomePage() {
 
       <section id="dermopigmentacion" className="py-14 md:py-24">
         <div className="section-shell">
-          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+                  <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <Reveal>
               <div className="card-premium card-hover p-8 md:p-10">
                 <p className="section-kicker">Qué es la dermopigmentación paramédica</p>
@@ -298,38 +298,8 @@ export default function HomePage() {
               </div>
             </Reveal>
 
-                      <div className="grid gap-5 sm:grid-cols-2">
-              {skinCases.map((item, index) => (
-                <Reveal key={item.title} delay={index * 0.06}>
-                  <div className="card-premium card-hover overflow-hidden p-3">
-                    <div className="grid gap-3 sm:grid-cols-2">
-                      {[
-                        { label: 'Antes', src: item.before },
-                        { label: 'Después', src: item.after }
-                      ].map((image) => (
-                        <div key={image.label} className="relative overflow-hidden rounded-[24px]">
-                          <Image
-                            src={image.src}
-                            alt={`${item.title} ${image.label.toLowerCase()}`}
-                            width={900}
-                            height={1100}
-                            className="h-[220px] w-full object-cover md:h-[250px]"
-                          />
-                          <div className="absolute left-3 top-3 rounded-full border border-white/40 bg-white/88 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-black/65 backdrop-blur-xl">
-                            {image.label}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="px-3 pb-3 pt-5">
-                      <CheckCircle2 className="h-6 w-6 text-black/70" />
-                      <p className="mt-4 font-serif text-2xl leading-tight">{item.title}</p>
-                    </div>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
+            <SkinCasesGrid />
+          </div>
           </div>
         </div>
       </section>
