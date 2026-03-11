@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 const nav = [
-  { label: 'Beneficios', href: '#beneficios' },
+  { label: 'Beneficios', href: '#servicios' },
   { label: 'Servicios', href: '#servicios' },
   { label: 'Resultados', href: '#resultados' },
   { label: 'FAQ', href: '#faq' },
