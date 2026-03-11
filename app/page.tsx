@@ -603,10 +603,23 @@ export default function HomePage() {
             </p>
           </div>
 
-          <p className="max-w-xl text-sm leading-6 text-black/52">
-            Aviso legal: La información de este sitio es orientativa y no sustituye una valoración individual.
-            Resultados pueden variar según cada caso.
-          </p>
+                 <div className="max-w-xl text-sm leading-6 text-black/52">
+            <p>
+              Aviso legal: La información de este sitio es orientativa y no sustituye una valoración individual.
+              Resultados pueden variar según cada caso.
+            </p>
+            <p className="mt-3">
+              Desarrollado por{' '}
+              <a
+                href="https://lulabtech.com"
+                target="_blank"
+                rel="noreferrer"
+                className="transition hover:text-black"
+              >
+                lulabtech.com
+              </a>
+            </p>
+          </div>
         </div>
       </footer>
     </main>
