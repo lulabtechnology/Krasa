@@ -258,7 +258,7 @@ export default function HomePage() {
 
       <section id="dermopigmentacion" className="py-14 md:py-24">
         <div className="section-shell">
-                  <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <Reveal>
               <div className="card-premium card-hover p-8 md:p-10">
                 <p className="section-kicker">Qué es la dermopigmentación paramédica</p>
@@ -277,7 +277,6 @@ export default function HomePage() {
             </Reveal>
 
             <SkinCasesGrid />
-          </div>
           </div>
         </div>
       </section>
