@@ -11,7 +11,7 @@ import {
   Sparkles,
   Stethoscope
 } from 'lucide-react';
-import BeforeAfter from '@/components/BeforeAfter';
+import ResultsGallery from '@/components/ResultsGallery';
 import FAQ from '@/components/FAQ';
 import FloatingWhatsApp from '@/components/FloatingWhatsApp';
 import Header from '@/components/Header';
