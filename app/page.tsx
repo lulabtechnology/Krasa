@@ -25,16 +25,16 @@ const reasons = [
     text: 'Cada caso se analiza según tipo de piel, tono, textura, extensión del área y objetivo visual.'
   },
   {
-    title: 'Pigmentos de alta calidad',
-    text: 'Se trabaja con materiales especializados y un enfoque técnico orientado a naturalidad y armonía.'
+    title: 'Formación clínica y técnica especializada',
+    text: 'El abordaje combina base en salud, criterio técnico quirúrgico y formación internacional en dermopigmentación paramédica.'
   },
   {
-    title: 'Técnicas paramédicas especializadas',
-    text: 'La valoración combina conocimiento de la piel, precisión técnica y sensibilidad estética.'
+    title: 'Experiencia con secuelas complejas',
+    text: 'Una parte importante de los casos atendidos corresponde a queloides y otras secuelas cutáneas que requieren valoración responsable y experiencia práctica.'
   },
   {
     title: 'Evaluación previa antes de cada tratamiento',
-    text: 'Se revisa el caso de forma individual para definir un abordaje responsable y realista.'
+    text: 'Se revisa el caso de forma individual para definir un abordaje responsable, realista y visualmente armónico.'
   }
 ];
 
@@ -150,11 +150,8 @@ export default function HomePage() {
                 <h1 className="mt-6 font-serif text-5xl leading-[0.96] text-balance md:text-7xl xl:text-[5.2rem]">
                   Recupera la apariencia natural de tu piel
                 </h1>
-
                 <p className="mt-6 max-w-xl text-lg leading-8 text-black/68 md:text-[1.12rem]">
-                  Especialistas en dermopigmentación paramédica en Panamá para mejorar visualmente
-                  cicatrices, estrías, vitiligo y secuelas cutáneas con un enfoque profesional,
-                  natural y personalizado.
+                  Dermopigmentación paramédica en Panamá para mejorar visualmente cicatrices, estrías, vitiligo, queloides y otras secuelas cutáneas con un enfoque profesional, natural y personalizado.
                 </p>
 
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -352,7 +349,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="especialista" className="py-14 md:py-24">
+            <section id="especialista" className="py-14 md:py-24">
         <div className="section-shell">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <Reveal>
@@ -371,20 +368,38 @@ export default function HomePage() {
               <div className="card-premium card-hover p-8 md:p-10">
                 <p className="section-kicker">Sobre la especialista</p>
                 <h2 className="section-title">Luisana Concepción</h2>
-                <p className="mt-3 text-lg text-black/70">
-                  Especialista en dermopigmentación paramédica
+
+                <p className="mt-3 text-lg leading-8 text-black/72">
+                  Profesional de salud panameña, técnico quirúrgico y especialista en dermopigmentación paramédica.
                 </p>
+
+                <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                  <div className="rounded-[20px] border border-black/6 bg-white/55 px-4 py-4">
+                    <p className="text-[11px] uppercase tracking-[0.24em] text-black/45">Experiencia</p>
+                    <p className="mt-2 text-sm leading-7 text-black/68">
+                      Más de 8 años de experiencia en atención profesional, valoración y manejo estético de secuelas cutáneas.
+                    </p>
+                  </div>
+
+                  <div className="rounded-[20px] border border-black/6 bg-white/55 px-4 py-4">
+                    <p className="text-[11px] uppercase tracking-[0.24em] text-black/45">Formación internacional</p>
+                    <p className="mt-2 text-sm leading-7 text-black/68">
+                      Más de 8 certificaciones en Brasil, Colombia, México y Panamá en dermopigmentación paramédica y estética avanzada.
+                    </p>
+                  </div>
+                </div>
+
                 <p className="mt-6 leading-8 text-black/68">
-                  Fundadora de Krása Dermoestudio, con formación especializada en técnicas de
-                  camuflaje paramédico y estética avanzada.
+                  Fundadora de Krása Dermoestudio, con un enfoque que integra criterio clínico, precisión técnica y sensibilidad estética para mejorar visualmente cicatrices, estrías, vitiligo y otras secuelas cutáneas de forma natural, armónica y discreta.
                 </p>
+
                 <p className="mt-5 leading-8 text-black/68">
-                  Su enfoque combina precisión técnica, conocimiento de la piel y sensibilidad
-                  estética, con el objetivo de ofrecer resultados naturales, armónicos y visualmente discretos.
+                  Dentro de su práctica, los casos de queloides ocupan una parte importante de la población atendida, representando aproximadamente un 60% de sus casos más consultados, lo que le ha permitido desarrollar experiencia práctica en valoración responsable y abordaje visual de este tipo de secuelas complejas.
                 </p>
-              <p className="mt-6 text-sm text-black/55">
-  Atención profesional con enfoque humano, estético y clínico.
-</p>
+
+                <p className="mt-6 text-sm leading-7 text-black/55">
+                  Atención profesional con enfoque humano, estético y clínico.
+                </p>
               </div>
             </Reveal>
           </div>
